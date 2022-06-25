@@ -29,7 +29,6 @@ const Pizza = () => {
 
   const submit = (evt) => {
     evt.preventDefault();
-    console.log(formValues.name)
     axios.post('https://reqres.in/api/orders', formValues)
     .then(res => console.log(res.data))
     .catch(err => console.error(err))
